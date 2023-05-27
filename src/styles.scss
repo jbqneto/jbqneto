@@ -6,17 +6,19 @@ html, body {
 
 body {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 #root {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   display: flex;
+  background: linear-gradient(#0c1a25, #010006);
 }
 
 .full-flex {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: auto;
   display: flex;
 }

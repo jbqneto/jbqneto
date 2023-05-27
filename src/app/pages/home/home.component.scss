@@ -8,8 +8,6 @@
   flex-direction: column;
   width: 100%;
   height: 100%;
-  background: linear-gradient(#0c1a25, #010006);
-  overflow: hidden;
   max-height: 100%;
   color: #b7c4ce;
 }
@@ -27,7 +25,6 @@ main {
   .logo {
     width: auto;
     height: auto;
-    max-width: 50%;
     max-height: 50%;
     align-items: center;
     text-align: center;
@@ -44,7 +41,7 @@ main {
 
   .logo img {
     max-width: 300px;
-    width: auto;
+    width: 50vw;
     height: auto;
   }
 
