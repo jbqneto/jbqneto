@@ -1,0 +1,35 @@
+name: Angular Build, Test & Deploy
+
+on:
+  push:
+    branches:
+      - main  # Mude para o nome da sua branch principal, se necessário
+
+jobs:
+  build-test-deploy:
+    name: Build, Test & Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'  # Mude para a versão do Node.js que você está usando
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Angular app
+        run: ng build --prod
+
+      - name: Deploy via SCP
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.SCP_HOST }}
+          username: ${{ secrets.SCP_USERNAME }}
+          key: ${{ secrets.SCP_PRIVATE_KEY }}
+          source: dist
+          target: /path/to/destination 
