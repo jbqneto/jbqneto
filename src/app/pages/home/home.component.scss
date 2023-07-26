@@ -1,6 +1,7 @@
-:host, .content {
+:host,
+.content {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: flex;
 }
 
@@ -44,9 +45,7 @@ main {
     width: 50vw;
     height: auto;
   }
-
 }
-
 
 footer {
   flex-grow: 1;
@@ -59,7 +58,6 @@ footer {
   display: flex;
 
   .socials {
-
     width: 50vw;
     display: flex;
     justify-content: space-around;
