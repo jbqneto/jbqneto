@@ -3,7 +3,7 @@ name: Angular Build, Test & Deploy
 on:
   push:
     branches:
-      - main # Mude para o nome da sua branch principal, se necessário
+      - master
 
 jobs:
   build-test-deploy:
@@ -32,4 +32,4 @@ jobs:
           username: ${{ secrets.SCP_USERNAME }}
           key: ${{ secrets.SCP_PRIVATE_KEY }}
           source: dist
-          target: /home/development/jbqneto
+          target: /var/www/jbqneto

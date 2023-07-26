@@ -34,7 +34,7 @@ main {
 
   .about {
     padding: 8vw;
-    padding-top: 2vh;
+    padding-top: 4vh;
     padding-bottom: 2vh;
     text-justify: auto;
     text-align: center;
@@ -77,5 +77,25 @@ footer {
       color: inherit;
       padding-right: 8px;
     }
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .about {
+    padding: 2vw;
+  }
+}
+
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 768px) {
+  .about {
+    padding: 10vw;
+  }
+}
+
+/* Large devices such as laptops (1024px and up) */
+@media only screen and (min-width: 1024px) {
+  .about {
+    padding: 12vw;
   }
 }
